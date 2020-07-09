@@ -7,7 +7,7 @@ public class Main {
 	}
 	
 	
-	public static void main(String[] a ) throws NotValidDateException, ParseException {
+	public static void main(String[] a ) throws  ParseException {
 		BackEnd be =new BackEnd("employee.txt");
 		System.out.println(be.findTwoEmployeeWorkingTheMostAsATeam());
 		

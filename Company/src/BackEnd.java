@@ -19,12 +19,12 @@ public class BackEnd {
 
 List<Employee> employees=new ArrayList<Employee>();
 	
-	public BackEnd(String filePath) throws NotValidDateException, ParseException {
+	public BackEnd(String filePath) throws  ParseException {
 		openFile( filePath);
 	}
 	
 	
-	public void openFile(String filePath) throws NotValidDateException, ParseException {
+	public void openFile(String filePath) throws  ParseException {
 		
 			File file =new File(filePath);
 				if(!file.exists()) {
@@ -143,6 +143,7 @@ List<Employee> employees=new ArrayList<Employee>();
 				
 				if(max<Integer.parseInt(split[2])) {
 					max=Integer.parseInt(split[2]);
+					System.out.println(max);
 					output=list.get(i);
 				}
 					
@@ -150,7 +151,7 @@ List<Employee> employees=new ArrayList<Employee>();
 			
 		
 		return "User with ID="+output.split(":")[0]+" work the most with User ID="
-		+output.split(":")[1];
+		+output.split(":")[1]+" ";
 		
 		
 	}
@@ -165,6 +166,7 @@ List<Employee> employees=new ArrayList<Employee>();
 	         LocalDate secondDate = LocalDate.parse(secondInput, formatter);
 	         long days = ChronoUnit.DAYS.between(firstDate, secondDate);
 	        return days;
+	       
 	}
 	public String getCurrentDate() {
 		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");  

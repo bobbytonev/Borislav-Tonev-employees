@@ -105,7 +105,7 @@ List<Employee> employees=new ArrayList<Employee>();
 				 * employees.get(i).getWorkingTime().put(employees.get(i).getId(),
 				 * employees.get(j).getStart().compareTo(employees.get(j).getEnd())); }
 				 */
-					
+					if(employees.get(i).getProjectID().equals(employees.get(j).getProjectID())) {
 					
 					if(getDaysBetween(employees.get(i).getStart(),employees.get(j).getStart())>=0
 							||getDaysBetween(employees.get(j).getEnd(),employees.get(i).getEnd())>=0) {
@@ -119,6 +119,7 @@ List<Employee> employees=new ArrayList<Employee>();
 					}else if(getDaysBetween(employees.get(i).getStart(),employees.get(j).getStart())>=0
 							||getDaysBetween(employees.get(i).getEnd(),employees.get(j).getEnd())>=0) {
 						employees.get(i).getWorkingTime().put(employees.get(j).getId(),(int) getDaysBetween(employees.get(j).getStart(),employees.get(j).getEnd()));
+					}
 					}
 						
 						

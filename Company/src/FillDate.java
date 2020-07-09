@@ -10,8 +10,8 @@ public class FillDate {
 		// TODO Auto-generated constructor stub
 	}
 	
-	final static int ids[] = {110,111,112,113,114,115,116,117,118};
-	final static int projectids[] = {10,11,12,13,14,15,16,17,18};
+	final static int ids[] = {110,111,112,113,114,115,116,117,118,119,120,121,122,123,124};
+	final static int projectids[] = {10,11,12,13,14,15,16,17,18,19,20,21,22,23,24};
 	
 	
 	public static void main(String[] a) throws FileNotFoundException {
@@ -21,7 +21,7 @@ public class FillDate {
 		
 		PrintWriter pw =new PrintWriter("employee.txt");
 		String output;
-		for(int i=0;i<100;i++) {
+		for(int i=0;i<10;i++) {
 			random=r.nextInt(ids.length);
 			random2=r.nextInt(ids.length);
 			
@@ -34,7 +34,7 @@ public class FillDate {
 			pw.print("\n");
 		}
 		pw.close();
-		System.out.println(randomDate(1999,12,12)); 
+	
 		
 		
 	}

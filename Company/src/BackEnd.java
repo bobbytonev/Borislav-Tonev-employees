@@ -150,7 +150,7 @@ List<Employee> employees=new ArrayList<Employee>();
 			
 		
 		return "User with ID="+output.split(":")[0]+" work the most with User ID="
-		+output.split(":")[1]+" Working Days="+output.split(":")[2];
+		+output.split(":")[1];
 		
 		
 	}

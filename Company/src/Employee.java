@@ -44,11 +44,13 @@ private Map<String,Integer> workingTime =new HashMap<String,Integer>();
 
 public void addWorkintTime(String id,int workingTime) {
 	int temp;
+	
 	if(getWorkingTime().get(id)==null) {
 		getWorkingTime().put(id, workingTime);
 		return;
 	}else {
 		 temp =getWorkingTime().get(id).intValue();
+		
 		getWorkingTime().remove(id);
 		getWorkingTime().put(id, temp+workingTime);
 	}

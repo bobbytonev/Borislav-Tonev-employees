@@ -104,7 +104,8 @@ List<Employee> employees=new ArrayList<Employee>();
 				 * .get(i).getEnd().after(employees.get(j).getEnd())) {
 				 * employees.get(i).getWorkingTime().put(employees.get(i).getId(),
 				 * employees.get(j).getStart().compareTo(employees.get(j).getEnd())); }
-				 */
+				 */ 
+					
 					if(employees.get(i).getProjectID().equals(employees.get(j).getProjectID())) {
 					
 						
